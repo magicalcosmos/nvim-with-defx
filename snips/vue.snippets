@@ -1,0 +1,35 @@
+snippet vuetemplate "Vue Template" br
+<template>
+${0}
+</template>
+
+<script>
+${1}
+</script>
+
+<style>
+${2}
+<style>
+
+endsnippet
+
+
+snippet vueTS "Vue Template" br
+<template>
+	<section>
+    ${0}
+  </section>
+</template>
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+@Component
+class ${1:ComponentName} extends Vue {
+  ${2}
+}
+export default ${1};
+</script>
+<style lang="scss" scoped>
+${3}
+</style>
+
+endsnippet

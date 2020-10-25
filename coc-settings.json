@@ -1,0 +1,18 @@
+{
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript",
+    "html",
+    "css",
+    "json",
+    "python"
+  ],
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+}
