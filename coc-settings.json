@@ -1,4 +1,6 @@
 {
+  "coc.preferences.colorSupport": true,
+  "codeLens.enable": true,
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
   "coc.preferences.formatOnSaveFiletypes": [
     "typescript",
@@ -7,12 +9,58 @@
     "json",
     "python"
   ],
+  "yaml.format.enable": true,
+  "signature.target": "float",
+  "yank.enableCompletion": false,
+	"prettier.eslintIntegration": true,
+	"prettier.disableLanguages": [],
+	"prettier.useTabs": true,
+	"prettier.formatterPriority": 1,
+	"typescript.suggestionActions.enabled": true,
+	"typescript.format.enabled": true,
+  "git.addGBlameToVirtualText": true,
+  "html.format.enable": true,
+	"javascript.referencesCodeLens.enable": true,
+	"javascript.showUnused": true,
+	"javascript.suggest.names": true,
+	"javascript.suggestionActions.enabled": true,
+	"json.format.enable": true,
+  "diagnostic-languageserver.filetypes": {
+		"vim": "vint",
+		"email": "languagetool",
+		"markdown": ["write-good", "markdownlint"],
+		"sh": "shellcheck",
+		"elixir": ["mix_credo", "mix_credo_compile"],
+		"eelixir": ["mix_credo", "mix_credo_compile"],
+		"php": ["phpstan", "psalm"]
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"elixir": "mix_format",
+		"eelixir": "mix_format"
+	},
   "languageserver": {
-    "go": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "trace.server": "verbose",
-      "filetypes": ["go"]
-    }
+    "golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"filetypes": ["go"],
+			"initializationOptions": {
+				"gocodeCompletionEnabled": true,
+				"diagnosticsEnabled": true,
+				"lintTool": "golint"
+			}
+		},
+    "bash": {
+			"command": "bash-language-server",
+			"args": ["start"],
+			"filetypes": ["sh"],
+			"ignoredRootPaths": []
+		},
+    "swift": {
+			"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+			"args": [],
+			"filetypes": ["swift"],
+			"initializationOptions": {},
+			"settings": {}
+		}
   }
 }
