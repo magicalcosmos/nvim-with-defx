@@ -1,9 +1,18 @@
 "---------------- Plugin Settings ----------------------
+
+" auto-install vim-plug
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 " Tools
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
-    
+
     " defx
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Kristijanhusak/defx-icons'
@@ -17,6 +26,18 @@ call plug#begin('~/.config/nvim/plugged')
 
     " floaterm
     Plug 'voldikss/vim-floaterm'
+
+    " Lean & mean status/tabline for vim that's light as air.
+    Plug 'vim-airline/vim-airline'
+
+    " Git
+    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'
+
+    " startify
+    Plug 'mhinz/vim-startify'
 
 " Color-schemes
     Plug 'morhetz/gruvbox'
@@ -155,3 +176,11 @@ source $HOME/.config/nvim/plug-settings/defx.vim
 source $HOME/.config/nvim/plug-settings/coc.vim
 " floaterm
 source $HOME/.config/nvim/plug-settings/floaterm.vim
+" Goyo
+source $HOME/.config/nvim/plug-settings/goyo.vim
+" fzf
+source $HOME/.config/nvim/plug-settings/fzf.vim
+" git
+source $HOME/.config/nvim/plug-settings/git.vim
+" fzf
+source $HOME/.config/nvim/plug-settings/start-screen.vim
