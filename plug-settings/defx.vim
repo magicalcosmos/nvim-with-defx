@@ -1,9 +1,9 @@
 " 使用 ;e 切换显示文件浏览，使用 ;a 查找到当前文件位置
 let g:maplocalleader='<Leader>'
-nnoremap <silent>tt
-            \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()` <CR>
-nnoremap <silent> <LocalLeader>a
-            \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
+" nnoremap <silent>tt
+"            \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()` <CR>
+nnoremap <silent> tt
+            \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
 
 call defx#custom#option('_', {
 	\ 'resume': 1,
