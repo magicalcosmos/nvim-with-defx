@@ -9,7 +9,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-" Tools
+    " Tools
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
 
@@ -39,8 +39,31 @@ call plug#begin('~/.config/nvim/plugged')
     " startify
     Plug 'mhinz/vim-startify'
 
-" Color-schemes
+    " Color-schemes
     Plug 'morhetz/gruvbox'
+    Plug 'dracula/vim', { 'as': 'dracula' }
+
+    " comments
+    Plug 'preservim/nerdcommenter'
+
+    " rainbow
+    Plug 'luochen1990/rainbow'
+
+    " vista
+    Plug 'liuchengxu/vista.vim'
+
+    " support surround operaion
+    Plug 'tpope/vim-surround'
+
+    " Find your forgot keys
+    Plug 'liuchengxu/vim-which-key'
+
+    " tabline
+    Plug 'mkitt/tabline.vim'
+
+    " nvim nightly
+    Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+
 call plug#end()
 "---------------- General Settings ----------------------
 set nocompatible
@@ -152,24 +175,15 @@ set background=dark
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
-" Goyo setttings
-function! s:goyo_enter()
-  set noshowmode
-  set noshowcmd
-  set scrolloff=999
-  Limelight
-endfunction
+hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
+hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
+hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
+let g:tablineclosebutton=1
 
-function! s:goyo_leave()
-  set showmode
-  set showcmd
-  set scrolloff=5
-  Limelight!
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "---------------- Plugin Settings ----------------------
+" vim which key
+source $HOME/.config/nvim/plug-settings/whichkeys.vim
+
 " defx
 source $HOME/.config/nvim/plug-settings/defx.vim
 " Coc
@@ -184,3 +198,19 @@ source $HOME/.config/nvim/plug-settings/fzf.vim
 source $HOME/.config/nvim/plug-settings/git.vim
 " fzf
 source $HOME/.config/nvim/plug-settings/start-screen.vim
+" nerdcommenter
+source $HOME/.config/nvim/plug-settings/nerdcommenter.vim
+" rainbow
+source $HOME/.config/nvim/plug-settings/rainbow.vim
+" vista
+source $HOME/.config/nvim/plug-settings/vista.vim
+" lazygit
+source $HOME/.config/nvim/plug-settings/lazygit.vim
+
+
+"
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif

@@ -1,6 +1,8 @@
 {
   "coc.preferences.colorSupport": true,
   "codeLens.enable": true,
+  "tsserver.log": "on",
+  "tsserver.trace.server": "on",
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
   "coc.preferences.formatOnSaveFiletypes": [
     "typescript",
