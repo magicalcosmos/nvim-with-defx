@@ -24,6 +24,10 @@ call plug#begin('~/.config/nvim/plugged')
     " Coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " Typescript highlighting
+    Plug 'leafgarland/typescript-vim'
+    Plug 'peitalin/vim-jsx-typescript'
+
     " floaterm
     Plug 'voldikss/vim-floaterm'
 
