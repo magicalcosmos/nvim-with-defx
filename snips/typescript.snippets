@@ -1,0 +1,19 @@
+snippet st "console.log" br
+console.log(${0});
+endsnippet
+
+snippet stp "console.log" br
+console.log(JSON.stringify(${0}, 2, null));
+endsnippet
+
+snippet f "function" br
+function ${1:newFunction}(${2:arg}) {
+  ${0}
+}
+endsnippet
+
+snippet fm "function method" br
+${1:newFunction}(${2:arg}) {
+  ${0}
+}
+endsnippet

@@ -67,6 +67,9 @@ call plug#begin('~/.config/nvim/plugged')
 
     " nvim nightly
     Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+    
+    " tag bar
+    Plug 'majutsushi/tagbar'
 
 call plug#end()
 "---------------- General Settings ----------------------

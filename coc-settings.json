@@ -1,33 +1,33 @@
 {
-  "coc.preferences.colorSupport": true,
-  "codeLens.enable": true,
-  "tsserver.log": "on",
-  "tsserver.trace.server": "on",
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
-  "coc.preferences.formatOnSaveFiletypes": [
-    "typescript",
-    "html",
-    "css",
-    "json",
-    "python"
-  ],
-  "yaml.format.enable": true,
-  "signature.target": "float",
-  "yank.enableCompletion": false,
+	"coc.preferences.colorSupport": true,
+	"codeLens.enable": true,
+	"tsserver.log": "on",
+	"tsserver.trace.server": "on",
+	"snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
+	"coc.preferences.formatOnSaveFiletypes": [
+		"typescript",
+		"html",
+		"css",
+		"json",
+		"python"
+	],
+	"yaml.format.enable": true,
+	"signature.target": "float",
+	"yank.enableCompletion": false,
 	"prettier.eslintIntegration": true,
 	"prettier.disableLanguages": [],
 	"prettier.useTabs": true,
 	"prettier.formatterPriority": 1,
 	"typescript.suggestionActions.enabled": true,
 	"typescript.format.enabled": true,
-  "git.addGBlameToVirtualText": true,
-  "html.format.enable": true,
+	"git.addGBlameToVirtualText": true,
+	"html.format.enable": true,
 	"javascript.referencesCodeLens.enable": true,
 	"javascript.showUnused": true,
 	"javascript.suggest.names": true,
 	"javascript.suggestionActions.enabled": true,
 	"json.format.enable": true,
-  "diagnostic-languageserver.filetypes": {
+	"diagnostic-languageserver.filetypes": {
 		"vim": "vint",
 		"email": "languagetool",
 		"markdown": ["write-good", "markdownlint"],
@@ -40,29 +40,18 @@
 		"elixir": "mix_format",
 		"eelixir": "mix_format"
 	},
-  "languageserver": {
-    "golang": {
+	"languageserver": {
+		"golang": {
 			"command": "gopls",
 			"rootPatterns": ["go.mod"],
 			"filetypes": ["go"],
-			"initializationOptions": {
-				"gocodeCompletionEnabled": true,
-				"diagnosticsEnabled": true,
-				"lintTool": "golint"
-			}
+			"trace.server": "verbose"
 		},
-    "bash": {
+		"bash": {
 			"command": "bash-language-server",
 			"args": ["start"],
 			"filetypes": ["sh"],
 			"ignoredRootPaths": []
-		},
-    "swift": {
-			"command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
-			"args": [],
-			"filetypes": ["swift"],
-			"initializationOptions": {},
-			"settings": {}
 		}
-  }
+	}
 }
