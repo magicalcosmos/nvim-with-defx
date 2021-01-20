@@ -2,8 +2,21 @@ snippet st "console.log" br
 console.log(${0});
 endsnippet
 
-snippet stp "console.log" br
+snippet stp "console.log(JSON.stringify())" br
 console.log(JSON.stringify(${0}, null, 2));
+endsnippet
+
+
+snippet clp "this.$log.log" br
+this.$log.log(JSON.stringify(${0}, null, 2));
+endsnippet
+
+snippet cle "this.$log.error" br
+this.$log.error(${0});
+endsnippet
+
+snippet cl2 "this.$log.warn" br
+this.$log.warn(${0});
 endsnippet
 
 snippet f "function" br

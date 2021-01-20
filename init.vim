@@ -32,7 +32,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'voldikss/vim-floaterm'
 
     " Lean & mean status/tabline for vim that's light as air.
-    Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline'
 
     " Git
     Plug 'mhinz/vim-signify'
@@ -67,9 +67,15 @@ call plug#begin('~/.config/nvim/plugged')
 
     " nvim nightly
     Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
-    
+
     " tag bar
     Plug 'majutsushi/tagbar'
+
+    " emmet
+    Plug 'mattn/emmet-vim'
+
+    " Sparkup lets you write HTML code faster
+    Plug 'rstacruz/sparkup'
 
 call plug#end()
 "---------------- General Settings ----------------------
@@ -128,16 +134,16 @@ if has("autocmd")
   set mouse=a
 endif
 "Status-line
-"set statusline=
-"set statusline+=%#PmenuSel#
-"set statusline+=\ %M
-"set statusline+=\ %y
-"set statusline+=\ %r
-"set statusline+=\ %F
-"set statusline+=%= "Right side settings
-"set statusline+=\ %c:%l/%L
-"set statusline+=\ %p%%
-"set statusline+=\ [%n]
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=\ %M
+set statusline+=\ %y
+set statusline+=\ %r
+set statusline+=\ %F
+set statusline+=%= "Right side settings
+set statusline+=\ %c:%l/%L
+set statusline+=\ %p%%
+set statusline+=\ [%n]
 "---------------- Key Remapping ----------------------
 let mapleader=" "
 
@@ -175,9 +181,6 @@ noremap tmp :-tabmove<CR>
 noremap tmn :+tabmove<CR>
 
 "---------------- Color Settings ----------------------
-colorscheme gruvbox
-set background=dark
-
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
@@ -186,6 +189,9 @@ hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
 hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
 hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 let g:tablineclosebutton=1
+
+colorscheme gruvbox
+set background=dark
 
 "---------------- Plugin Settings ----------------------
 " vim which key
@@ -213,7 +219,6 @@ source $HOME/.config/nvim/plug-settings/rainbow.vim
 source $HOME/.config/nvim/plug-settings/vista.vim
 " lazygit
 source $HOME/.config/nvim/plug-settings/lazygit.vim
-
 
 "
 " Automatically install missing plugins on startup
