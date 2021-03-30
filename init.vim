@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Kristijanhusak/defx-icons'
 
+    "Plug 'ycm-core/YouCompleteMe'
     " fzf
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -35,10 +36,10 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'vim-airline/vim-airline'
 
     " Git
-    Plug 'mhinz/vim-signify'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
-    Plug 'junegunn/gv.vim'
+    "Plug 'mhinz/vim-signify'
+    "Plug 'tpope/vim-fugitive'
+    "Plug 'tpope/vim-rhubarb'
+    "Plug 'junegunn/gv.vim'
 
     " startify
     Plug 'mhinz/vim-startify'
