@@ -64,7 +64,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'liuchengxu/vim-which-key'
 
     " tabline
-    Plug 'mkitt/tabline.vim'
+    " Plug 'mkitt/tabline.vim'
 
     " nvim nightly
     Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
@@ -78,12 +78,19 @@ call plug#begin('~/.config/nvim/plugged')
     " Sparkup lets you write HTML code faster
     Plug 'rstacruz/sparkup'
 
+    " beautiful tab line
+    Plug 'mg979/vim-xtabline'
+    " Plug 'psliwka/vim-smoothie'
+    Plug 'yuttie/comfortable-motion.vim'
+
 call plug#end()
 "---------------- General Settings ----------------------
 set nocompatible
 set encoding=UTF-8
 filetype plugin indent on  "Enable Plugin & Indent
 syntax on " Turning Syntax on
+set foldmethod=indent
+set foldlevelstart=99
 set autoread
 set wildmenu
 set number relativenumber "Setting line numbers
@@ -113,6 +120,8 @@ set ignorecase
 set smartcase
 set visualbell
 set noswapfile
+set nowrap
+set scrollopt=hor
 "silent !mkdir -p ~/.config/nvim/tmp/backup
 silent !mkdir -p ~/.config/nvim/tmp/undo
 silent !mkdir -p ~/.config/nvim/tmp/sessions
@@ -180,7 +189,6 @@ noremap tn :+tabnext<CR>
 " Move the tabs with tmn and tmi
 noremap tmp :-tabmove<CR>
 noremap tmn :+tabmove<CR>
-
 "---------------- Color Settings ----------------------
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
