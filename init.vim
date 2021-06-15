@@ -80,6 +80,7 @@ call plug#begin('~/.config/nvim/plugged')
 
     " beautiful tab line
     Plug 'mg979/vim-xtabline'
+
     " Plug 'psliwka/vim-smoothie'
     Plug 'yuttie/comfortable-motion.vim'
 
@@ -89,8 +90,11 @@ set nocompatible
 set encoding=UTF-8
 filetype plugin indent on  "Enable Plugin & Indent
 syntax on " Turning Syntax on
+
+" enable folding
 set foldmethod=indent
 set foldlevelstart=99
+
 set autoread
 set wildmenu
 set number relativenumber "Setting line numbers
