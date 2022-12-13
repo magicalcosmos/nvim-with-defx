@@ -2,7 +2,7 @@
 	"coc.preferences.colorSupport": true,
 	"codeLens.enable": true,
 	"tsserver.log": "on",
-	"tsserver.trace.server": "on",
+	"tsserver.trace.server": "verbose",
 	"snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
 	"coc.preferences.formatOnSaveFiletypes": [
 		"typescript",
@@ -39,5 +39,15 @@
 	"diagnostic-languageserver.formatFiletypes": {
 		"elixir": "mix_format",
 		"eelixir": "mix_format"
+	},
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cpp", "objc", "objcpp"],
+			"trace.server": "verbose",
+			"initializationOptions": {
+				"cacheDirectory": "/tmp/ccls"
+			}
+		}
 	}
 }

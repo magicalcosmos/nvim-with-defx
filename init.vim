@@ -23,8 +23,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf.vim'
 
     " Coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
     " Typescript highlighting
     Plug 'leafgarland/typescript-vim'
     Plug 'peitalin/vim-jsx-typescript'
@@ -83,7 +83,8 @@ call plug#begin('~/.config/nvim/plugged')
 
     " Plug 'psliwka/vim-smoothie'
     Plug 'yuttie/comfortable-motion.vim'
-
+    " vim org
+    Plug 'jceb/vim-orgmode'
 call plug#end()
 "---------------- General Settings ----------------------
 set nocompatible
